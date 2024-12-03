@@ -18,7 +18,7 @@ function Navbar() {
         <IoMdHome size={60} />
         <IoMdContact size={60}/>
         <FcBusiness size={60} />
-        <FaEnvelopeOpen size={61}/>
+        <FaEnvelopeOpen size={60}/>
       </div>
     </div>
   )
