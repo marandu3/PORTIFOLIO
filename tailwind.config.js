@@ -6,10 +6,7 @@ export default {
   theme: {
     extend: {
       colors:{
-          'papobg':'#640D5F',
-          'headtext':'#D91656',
-          'cardbg':'#EB5B00',
-          'yellow':'#FFB200',
+          'papobg':'#970747',
       },
     },
   },
