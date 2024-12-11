@@ -2,6 +2,7 @@ import { FaWindowClose } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMoon, IoMoonOutline } from "react-icons/io5";
 import { useState } from "react";
+import Profile from '../assets/profilepic.jpg'
 
 function Navbar() {
   const [isblack, setIsBlack] = useState(false);
@@ -23,8 +24,8 @@ function Navbar() {
       >
         {/* Logo */}
         <div className="font-bold text-2xl sm:text-3xl font-serif px-2">
-          <div className="bg-slate-500 w-14 h-14 rounded-full flex items-center justify-center">
-            {/* Profile Image Placeholder */}
+          <div className="bg-slate-500 overflow-hidden w-14 h-13 rounded-full flex items-center justify-center">
+            <img src={Profile} size='100px'/>
           </div>
         </div>
 
