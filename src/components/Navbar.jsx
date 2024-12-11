@@ -1,9 +1,5 @@
 import { FaWindowClose } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
-import { IoMdHome } from "react-icons/io";
-import { IoMdContact } from "react-icons/io";
-import { FcBusiness } from "react-icons/fc";
-import { FaEnvelopeOpen } from "react-icons/fa";
 import { IoMoon, IoMoonOutline } from "react-icons/io5";
 import { useState } from "react";
 
@@ -20,56 +16,99 @@ function Navbar() {
   };
 
   return (
-    <div className="flex flex-col gap-y-1">
+    <div className="flex items-center flex-col gap-y-1">
       {/* Top Navbar */}
-      <div className="flex bg-papobg w-full h-[80px] justify-between items-center px-4 sm:px-8">
+      <div className="flex  w-[97%] h-[80px] justify-between items-center px-4 sm:px-8 rounded-md border-b-4 border-r-2">
         {/* Logo */}
-        <div className="font-bold text-2xl sm:text-3xl font-serif">
-          <p>MY PORTFOLIO</p>
+        <div className="font-bold text-black text-2xl sm:text-3xl font-serif px-2">
+          <div className="bg-slate-500 w-14 h-14 rounded-full">
+            {/* profileimage */}
+          </div>
         </div>
 
         {/* Hamburger Menu Icon */}
         <div className="flex items-center sm:hidden">
+
+          <div
+            className="flex items-center justify-center w-12 h-12 hover:scale-110 transition-transform duration-200 cursor-pointer"
+            onClick={themeHandler}
+          >
+            {isblack ? (
+              <IoMoon size={30} className="text-black" />
+            ) : (
+              <IoMoonOutline size={30} />
+            )}
+          </div>
+
           {isMenuOpen ? (
             <FaWindowClose
               size={27}
               className="hover:cursor-pointer"
-              color="white"
+              color="black"
               onClick={toggleMenu}
             />
           ) : (
             <AiOutlineMenu
               size={27}
               className="hover:cursor-pointer"
-              color="white"
+              color="black"
               onClick={toggleMenu}
             />
           )}
         </div>
+        
 
         {/* Desktop Navigation Links */}
-        <div className="hidden sm:flex justify-between flex-1 items-center">
-          <IoMdHome size={60} className="hover:scale-110 transition-transform duration-200" />
-          <IoMdContact size={60} className="hover:scale-110 transition-transform duration-200" />
-          <FcBusiness size={60} className="hover:scale-110 transition-transform duration-200" />
-          <FaEnvelopeOpen size={55} className="hover:scale-110 transition-transform duration-200" />
+        <div className="hidden sm:flex flex-1 items-center justify-center">
+          <ul className="flex flex-row gap-x-12 font-semibold text-lg text-black">
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              Home
+            </li>
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              About
+            </li>
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              My Projects
+            </li>
+
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2 bg-blue-600 rounded-xl">
+              Blogs
+            </li>
+
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2 bg-pink-600 rounded-xl">
+              Contacts
+            </li>
+
+          </ul>
           <div
-            className="flex items-center justify-center w-12 h-12 hover:scale-110 transition-transform duration-200 cursor-pointer"
+            className="flex items-center justify-center w-12 h-12 hover:scale-110 transition-transform translate-x-40 duration-200 cursor-pointer"
             onClick={themeHandler}
           >
-            {isblack ? <IoMoon size={30} /> : <IoMoonOutline size={30} />}
+            {isblack ? (
+              <IoMoon size={30} className="text-black" />
+            ) : (
+              <IoMoonOutline size={30} />
+            )}
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="w-full bg-papobg flex flex-col items-center py-4 sm:hidden">
-          <ul className="text-white space-y-4 font-semibold text-lg">
-            <li className="hover:text-gray-400 cursor-pointer">HOME</li>
-            <li className="hover:text-gray-400 cursor-pointer">ABOUT ME</li>
-            <li className="hover:text-gray-400 cursor-pointer">MY PORTFOLIO</li>
-            <li className="hover:text-gray-400 cursor-pointer">CONTACT ME</li>
+        <div className="w-full bg-gray-400 flex flex-col items-center py-4 sm:hidden shadow-md shadow-gray-500">
+          <ul className="text-black space-y-4 font-semibold text-lg">
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              HOME
+            </li>
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              ABOUT ME
+            </li>
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              MY PORTFOLIO
+            </li>
+            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
+              CONTACT ME
+            </li>
           </ul>
         </div>
       )}
