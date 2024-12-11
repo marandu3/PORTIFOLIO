@@ -96,19 +96,25 @@ function Navbar() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="w-full bg-gray-400 flex flex-col items-center py-4 sm:hidden shadow-md shadow-gray-500">
-          <ul className="text-black space-y-4 font-semibold text-lg">
-            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
-              HOME
+          <ul className="flex flex-col gap-x-12 text-center font-semibold text-lg text-black">
+            <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">
+              Home
             </li>
-            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
-              ABOUT ME
+            <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">
+              About
             </li>
-            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
-              MY PORTFOLIO
+            <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">
+              My Projects
             </li>
-            <li className="hover:text-gray-500 cursor-pointer px-4 py-2">
-              CONTACT ME
+
+            <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">
+              Blogs
             </li>
+
+            <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">
+              Contacts
+            </li>
+
           </ul>
         </div>
       )}
