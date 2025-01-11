@@ -5,4 +5,11 @@
 *{
     margin:0;
     padding:0;
+    scrollbar-width: none;
+}
+
+a.active{
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
 }
