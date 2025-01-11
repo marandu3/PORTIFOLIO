@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Profile from "../assets/profilepic.jpg";
+import QRCode from "../assets/qrcode.jpg";
 import Typewriter from "typewriter-effect";
-import { FaWhatsapp } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function Home() {
+  const [showQR, setShowQR] = useState(false); // State to toggle QR code visibility
+
   return (
     <div className="md:flex">
       {/* Left Section */}
@@ -39,13 +42,10 @@ function Home() {
 
           <div>
             <button
-              onClick={() => window.open("https://wa.me/qr/OBIC7R7IIAZJH1")}
-              className="flex items-center space-x-2 hover:text-green- bg-blue-600 text-white px-4 py-2 rounded-md mt-4"
+              onClick={() => setShowQR(true)}
+              className="flex flex-row gap-4 items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-700"
             >
               <span>Let's Connect</span>
-              <span className="text-white hover:text-green-500">
-                <FaWhatsapp />
-              </span>
             </button>
           </div>
         </div>
@@ -59,6 +59,28 @@ function Home() {
           className="object-contain w-64 h-64 rounded-full"
         />
       </div>
+
+      {/* QR Code Modal */}
+      {showQR && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-lg font-bold mb-4">Scan the QR Code</h2>
+            <img src={QRCode} alt="QR Code" className="w-48 h-48 mx-auto" />
+
+            <div classname="flex flex-row gap-4 justify-center items-center">
+              <button
+                onClick={() => setShowQR(false)}
+                className="mt-a bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+              >
+                Close
+              </button>
+              <button onClick={()=>window.open("https://wa.me/qr/OBIC7R7IIAZJH1")} className="translate-x-4 translate-y-2">
+                <IoLogoWhatsapp size={35} color="green" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
