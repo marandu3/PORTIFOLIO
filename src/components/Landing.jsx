@@ -9,23 +9,25 @@ function Home() {
       {/* Left Section */}
       <div className="w-full md:w-[50%] mt-2 md:h-screen flex justify-center pt-20">
         <div className="w-[90%]">
-          <div className="flex items-center space-x-2">
+          <div className="flex flex-wrap items-center">
             <p className="text-xl font-bold text-gray-800">
-              Hello. I'm Marandu,
+              Hello. I'm Marandu,{" "}
             </p>
-            <Typewriter
-              options={{
-                strings: [
-                  "a passionate Web Developer",
-                  "Tech Enthusiast",
-                  "an aspiring Computer Engineer",
-                ],
-                autoStart: true,
-                loop: true,
-                wrapperClassName: "text-2xl text-blue-600 font-bold",
-                cursorClassName: "text-xl text-blue-600",
-              }}
-            />
+            <div className="w-full md:w-auto text-2xl text-blue-600 font-bold">
+              <Typewriter
+                options={{
+                  strings: [
+                    "a passionate Web Developer",
+                    "Tech Enthusiast",
+                    "an aspiring Computer Engineer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  wrapperClassName: "inline",
+                  cursorClassName: "inline",
+                }}
+              />
+            </div>
           </div>
           <p className="mt-4 text-lg text-gray-800 text-justify">
             I specialize in creating intuitive, responsive, and visually
@@ -36,11 +38,13 @@ function Home() {
           </p>
 
           <div>
-            <button onClick={()=>window.open('https://wa.me/qr/OBIC7R7IIAZJH1')}
-            className="flex items-center space-x-2 hover:text-green- bg-blue-600 text-white px-4 py-2 rounded-md mt-4">
-              <span >Let's Connect</span>
-              <span className="text-white hover:text-green-500"> 
-              <FaWhatsapp/>
+            <button
+              onClick={() => window.open("https://wa.me/qr/OBIC7R7IIAZJH1")}
+              className="flex items-center space-x-2 hover:text-green- bg-blue-600 text-white px-4 py-2 rounded-md mt-4"
+            >
+              <span>Let's Connect</span>
+              <span className="text-white hover:text-green-500">
+                <FaWhatsapp />
               </span>
             </button>
           </div>
