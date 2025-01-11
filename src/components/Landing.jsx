@@ -49,6 +49,12 @@ function Home() {
               <span>Let's Connect</span>
             </button>
           </div>
+
+          <div className="flex  justify-center gap-8 mt-7">
+            <FaGithub size={45} onClick={()=>window.open("https://www.github.com/marandu3")}/>
+            <FaInstagramSquare size={45} onClick={()=>window.open("https://www.instagram.com/_m32003")}/>
+            <FaLinkedin size={45} color="darkblue"/>
+          </div>
         </div>
       </div>
 
