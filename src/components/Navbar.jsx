@@ -2,6 +2,7 @@ import { FaWindowClose } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { NavLink } from "react-router"; // Import NavLink from react-router-dom
+import logo from "../assets/logo.jpg";
 
 
 function Navbar() {
@@ -20,7 +21,7 @@ function Navbar() {
         {/* Logo */}
         <div className="font-bold text-2xl md:text-3xl font-serif px-2">
           <div className="bg-slate-500 overflow-hidden w-14 h-13 rounded-full flex items-center justify-center">
-           
+            <img src={logo} alt="logo" className="w-14 h-14 rounded-full" />
           </div>
         </div>
 

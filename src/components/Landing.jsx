@@ -3,6 +3,7 @@ import Profile from "../assets/profilepic.jpg";
 import QRCode from "../assets/qrcode.jpg";
 import Typewriter from "typewriter-effect";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaInstagramSquare, FaLinkedin, FaGithub  } from "react-icons/fa";
 
 function Home() {
   const [showQR, setShowQR] = useState(false); // State to toggle QR code visibility
@@ -10,7 +11,7 @@ function Home() {
   return (
     <div className="md:flex">
       {/* Left Section */}
-      <div className="w-full md:w-[50%] mt-2 md:h-screen flex justify-center pt-20">
+      <div className="w-full md:w-[50%] mt-2 md:h-screen flex justify-center pt-20 shadow-md pb-4">
         <div className="w-[90%]">
           <div className="flex flex-wrap items-center">
             <p className="text-xl font-bold text-gray-800">
@@ -40,7 +41,7 @@ function Home() {
             solve real-world problems.
           </p>
 
-          <div>
+          <div className="flex justify-center">
             <button
               onClick={() => setShowQR(true)}
               className="flex flex-row gap-4 items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-700"
@@ -52,13 +53,20 @@ function Home() {
       </div>
 
       {/* Right Section */}
-      <div className="flex md:w-[50%] md:h-screen justify-center items-center">
+      <div className="flex pb-2 md:w-[50%] md:h-screen justify-center pt-3 items-center ">
         <img
           src={Profile}
           alt="Profile"
-          className="object-contain w-64 h-64 rounded-full"
+          className="object-contain w-64 h-64 rounded-full drop-shadow-xl shadow-xl"
         />
       </div>
+
+      {/* Footer : only visible in small screens*/}
+        <div className="md:hidden w-full bg-blue-400 text-white text-center py-2 flex gap-4">
+        <FaInstagramSquare size={30}  color='red' onClick={()=>window.open('https://instagram.com/_m32003')}/>
+        <FaLinkedin size={30} className="hover:cursor-pointer" color='darkblue'/>
+        <FaGithub size={30} className="hover:cursor-pointer" color='black' onClick={()=>window.open("https://github.com/marandu3")}/>
+        </div>
 
       {/* QR Code Modal */}
       {showQR && (
