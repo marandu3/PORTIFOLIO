@@ -122,7 +122,7 @@ function Home() {
                 }
               />
         </div>
-        <p className="mt-2  text-black">Copyright &copy; 2025. Marandu, John Wilbald</p>
+        <p className="mt-2  text-black">Copyright &copy; 2025. Marandu3</p>
       </footer>
 
       {/* QR Code Modal */}
