@@ -4,6 +4,7 @@ import QRCode from "../assets/qrcode.jpg";
 import Typewriter from "typewriter-effect";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaInstagramSquare, FaLinkedin, FaGithub  } from "react-icons/fa";
+import gmail from "../assets/gmail.png";
 
 function Home() {
   const [showQR, setShowQR] = useState(false); // State to toggle QR code visibility
@@ -54,6 +55,7 @@ function Home() {
             <FaGithub size={45} onClick={()=>window.open("https://www.github.com/marandu3")}/>
             <FaInstagramSquare size={45} onClick={()=>window.open("https://www.instagram.com/_m32003")}/>
             <FaLinkedin size={45} color="darkblue"/>
+            <img src={gmail} alt="gmail" className="w-12 h-12" onClick={()=>window.open("mailto:johnwillymarandu@gmail.com")}/> 
           </div>
         </div>
       </div>

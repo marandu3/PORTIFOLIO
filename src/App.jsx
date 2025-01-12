@@ -5,7 +5,7 @@ import Projects from './components/Projects'
 import Landing from './components/Landing'
 import Blog from './components/Blog'
 import Contact from './components/Contacts'
-
+import Email from './components/Email'
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} /> 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/email" element={<Email />} />
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
     </div>
