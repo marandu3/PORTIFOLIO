@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import phone from "../assets/phone.png";
 
 function Contacts() {
   const form = useRef();
@@ -24,7 +25,8 @@ function Contacts() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gradient-to-b from-blue-500 to-purple-700 text-white px-4 py-8">
+    <div>
+        <div className=" flex flex-col items-center justify-center w-full min-h-screen bg-gradient-to-b from-blue-500 to-purple-700 text-white px-4 py-8">
       <h1 className="text-4xl font-bold mb-6">Contact Me</h1>
       <p className="text-lg text-center mb-8">
         Have questions, suggestions, or just want to say hello? Fill out the form below, and I'll get back to you as soon as possible!
@@ -76,9 +78,16 @@ function Contacts() {
           >
             Send Message
           </button>
+          <hr></hr>
+          <p className="flex justify-center gap-4" >
+            <img src={phone} className="w-10 h-10" alt="phone call"/> 
+            <p className="translate-y-2">:+255 757129449</p>
+          </p>
         </form>
       </div>
     </div>
+    </div>
+    
   );
 }
 
