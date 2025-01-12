@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function Contacts() {
   const form = useRef();
@@ -8,7 +8,7 @@ function Contacts() {
     e.preventDefault();
 
     emailjs
-      .sendForm("maranduemail2003", "template_sv4hqpp", form.current, {
+      .sendForm("maranduemail2003", "template_d9acnxj", form.current, {
         publicKey: "ebQFXEEZHSc4oAhyN",
       })
       .then(
