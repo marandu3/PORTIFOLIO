@@ -51,11 +51,11 @@ function Home() {
             </button>
           </div>
 
-          <div className="flex  justify-center gap-8 mt-7">
-            <FaGithub size={45} onClick={()=>window.open("https://www.github.com/marandu3")}/>
-            <FaInstagramSquare size={45} onClick={()=>window.open("https://www.instagram.com/_m32003")}/>
-            <FaLinkedin size={45} color="darkblue"/>
-            <img src={gmail} alt="gmail" className="w-12 h-12" onClick={()=>window.open("mailto:johnwillymarandu@gmail.com")}/> 
+          <div className="hidden md:flex  justify-center gap-8 mt-7">
+            <FaGithub size={45} className="hover:cursor-pointer" onClick={()=>window.open("https://www.github.com/marandu3")}/>
+            <FaInstagramSquare size={45} className="hover:cursor-pointer" onClick={()=>window.open("https://www.instagram.com/_m32003")}/>
+            <FaLinkedin className="hover:cursor-pointer" size={45} color="darkblue"/>
+            <img src={gmail} alt="gmail" className="w-12 hover:cursor-pointer h-12" onClick={()=>window.open("mailto:johnwillymarandu@gmail.com")}/> 
           </div>
         </div>
       </div>
@@ -74,6 +74,7 @@ function Home() {
         <FaInstagramSquare size={30}  color='red' onClick={()=>window.open('https://instagram.com/_m32003')}/>
         <FaLinkedin size={30} className="hover:cursor-pointer" color='darkblue'/>
         <FaGithub size={30} className="hover:cursor-pointer" color='black' onClick={()=>window.open("https://github.com/marandu3")}/>
+        <img src={gmail} alt="gmail" className="w-8 hover:cursor-pointer h-8" onClick={()=>window.open("mailto:johnwillymarandu@gmail.com")}/>
         </div>
 
       {/* QR Code Modal */}

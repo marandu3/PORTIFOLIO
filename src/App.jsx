@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import About from './components/Abouts'
 import Projects from './components/Projects'
 import Landing from './components/Landing'
-import Blog from './components/Blog'
 import Contact from './components/Contacts'
 import Email from './components/Email'
 
@@ -15,8 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/Abouts" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} /> 
+        <Route path="/projects" element={<Projects />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/email" element={<Email />} />
         <Route path="*" element={<div>Not Found</div>} />
