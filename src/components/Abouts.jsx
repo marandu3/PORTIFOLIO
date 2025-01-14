@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import AboutCard from "./AboutCard";
 
 function Abouts() {
   return (
-    <div>About</div>
-  )
+    <div>
+      <AboutCard />
+    </div>
+  );
 }
 
-export default Abouts
+export default Abouts;
