@@ -53,7 +53,7 @@ function Navbar() {
             <NavLink to="/" onClick={closeMenu}>
               <li className="hover:text-gray-500 cursor-pointer px-4 py-2">Home</li>
             </NavLink>
-            <NavLink to="/Abouts" onClick={closeMenu}>
+            <NavLink to="/Abouts/Abouts/Education" onClick={closeMenu}>
               <li className="hover:text-gray-500 cursor-pointer px-4 py-2">About</li>
             </NavLink>
             <NavLink to="/projects" onClick={closeMenu}>
@@ -75,7 +75,7 @@ function Navbar() {
             <NavLink to="/" onClick={closeMenu}>
               <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">Home</li>
             </NavLink>
-            <NavLink to="/Abouts" onClick={closeMenu}>
+            <NavLink to="/Abouts/Abouts/Education" onClick={closeMenu}>
               <li className="hover:cursor-pointer hover:border-b-2 cursor-pointer px-4 py-2">About</li>
             </NavLink>
             <NavLink to="/projects" onClick={closeMenu}>

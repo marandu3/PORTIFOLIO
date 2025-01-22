@@ -5,16 +5,17 @@ import Typewriter from "typewriter-effect";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaInstagramSquare, FaLinkedin, FaGithub } from "react-icons/fa";
 import gmail from "../assets/gmail.png";
+import Footer from "./Footer"
 
 function Home() {
   const [showQR, setShowQR] = useState(false); // State to toggle QR code visibility
 
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className=" flex flex-col relative">
       {/* Main Content */}
       <div className="md:flex flex-grow">
         {/* Left Section */}
-        <div className="w-full md:w-[50%] mt-2 md:h-screen flex justify-center pt-20 shadow-md pb-4">
+        <div className="w-full md:w-[50%] mt-2 flex justify-center pt-20 shadow-md pb-4">
           <div className="w-[90%]">
             <div className="flex flex-wrap items-center">
               <p className="text-xl font-bold text-gray-800">
@@ -84,7 +85,7 @@ function Home() {
         </div>
 
         {/* Right Section */}
-        <div className="flex pb-16 md:w-[50%]  md:h-screen justify-center pt-3 items-center">
+        <div className="flex pb-16 md:w-[50%]  justify-center pt-3 items-center shadow-lg">
           <img
             src={Profile}
             alt="Profile"
@@ -94,36 +95,7 @@ function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-blue-400 flex md:justify-end justify-between text-white text-center py-2 w-full fixed bottom-0 z-50">
-        <div className="flex md:hidden justify-center gap-4 items-center">
-        <FaGithub
-                size={30}
-                className="hover:cursor-pointer"
-                onClick={() => window.open("https://www.github.com/marandu3")}
-              />
-              <FaInstagramSquare
-                size={30}
-                className="hover:cursor-pointer"
-                onClick={() =>
-                  window.open("https://www.instagram.com/_m32003")
-                }
-              />
-              <FaLinkedin
-                size={30}
-                className="hover:cursor-pointer"
-                color="darkblue"
-              />
-              <img
-                src={gmail}
-                alt="gmail"
-                className="w-8 hover:cursor-pointer h-8"
-                onClick={() =>
-                  window.open("mailto:johnwillymarandu@gmail.com")
-                }
-              />
-        </div>
-        <p className="mt-2  text-black">Copyright &copy; 2025. Marandu3</p>
-      </footer>
+      <Footer/>
 
       {/* QR Code Modal */}
       {showQR && (

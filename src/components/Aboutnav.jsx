@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 function Aboutnav() {
   return (
     <div className="flex justify-center w-full">
-      <div className="flex items-center w-[70%] text-white text-lg md:text-xl bg-gradient-to-b from-blue-500 py-1 to-purple-700  rounded-lg justify-around">
+      <div className="flex items-center w-[95%] text-white text-lg md:text-xl bg-gradient-to-b from-blue-500 py-1 to-purple-700  rounded-lg justify-around">
         {/* EDUCATION NavLink */}
         <NavLink
           to="Abouts/Education"

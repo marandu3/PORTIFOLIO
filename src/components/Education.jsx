@@ -3,9 +3,14 @@ import Educard from '../components/AboutCard'
 
 function Education() {
   return (
-    <div>
-        sdfghjkm
+    <div className='md:grid md:grid-cols-3'>
+        <Educard/>
+        <Educard/>
+        <Educard/>
+        <Educard/>
+        <Educard/>
     </div>
+    
   )
 }
 
