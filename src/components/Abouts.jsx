@@ -1,12 +1,14 @@
 import React from "react";
-import AboutCard from "./AboutCard";
+import { NavLink, Outlet } from "react-router";
+import Aboutnav from "./Aboutnav";
 
-function Abouts() {
+function About() {
   return (
-    <div>
-      <AboutCard />
+    <div className="flex flex-col items-center">
+      <Aboutnav/>
+      <Outlet />
     </div>
   );
 }
 
-export default Abouts;
+export default About;
