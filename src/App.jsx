@@ -5,6 +5,9 @@ import Projects from './components/Projects'
 import Landing from './components/Landing'
 import Contact from './components/Contacts'
 import Email from './components/Email'
+import Skills from './components/Skills'
+import Timeline from './components/Timeline'
+import Education from './components/Education'
 
 function App() {
 
@@ -13,7 +16,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/Abouts" element={<About />} />
+        <Route path="/Abouts" element={<About />} >
+          <Route path="Abouts/Education" element={<Education/>} />
+          <Route path="Abouts/Skills" element={<Skills/>} />
+          <Route path="Abouts/Timeline" element={<Timeline/>} />
+        </Route>
         <Route path="/projects" element={<Projects />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/email" element={<Email />} />

@@ -1,12 +1,20 @@
 import React from "react";
-import AboutCard from "./AboutCard";
+import { NavLink, Outlet } from "react-router";
+import Aboutnav from "./Aboutnav";
+import Footerpages from "./Footerpages";
 
-function Abouts() {
+function About() {
   return (
     <div>
-      <AboutCard />
+      <div className="flex flex-col">
+      <Aboutnav/>
+      <Outlet />
     </div>
+    <Footerpages/>
+    </div>
+    
   );
 }
 
-export default Abouts;
+export default About;
+ 
