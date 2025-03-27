@@ -1,18 +1,17 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router";
 import Aboutnav from "./Aboutnav";
-import Footerpages from "./Footerpages";
+import Footer from "./Footer";
 
 function About() {
   return (
     <div>
       <div className="flex flex-col">
-      <Aboutnav/>
-      <Outlet />
+        <Aboutnav/>
+        <Outlet />
+      </div>
+      <Footer/>
     </div>
-    <Footerpages/>
-    </div>
-    
   );
 }
 

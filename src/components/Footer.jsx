@@ -38,7 +38,7 @@ function Footer() {
           {/* Social Links - Only visible on mobile devices */}
           <div className="flex md:hidden justify-center items-center space-x-6 mb-6">
             <a 
-              href="https://www.github.com/marandu3" 
+              href="https://github.com/marandu3/PORTIFOLIO" 
               target="_blank" 
               rel="noopener noreferrer"
               className={`transform transition-all duration-300 hover:scale-125 ${

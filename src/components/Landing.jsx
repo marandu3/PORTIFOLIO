@@ -64,7 +64,7 @@ function Home() {
               <FaGithub
                 size={45}
                 className={`hover:cursor-pointer hover:text-primary-500 transition-colors ${darkMode ? 'text-light-100' : 'text-gray-800'}`}
-                onClick={() => window.open("https://www.github.com/marandu3")}
+                onClick={() => window.open("https://github.com/marandu3/PORTIFOLIO")}
               />
               <FaInstagramSquare
                 size={45}

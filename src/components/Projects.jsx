@@ -4,6 +4,7 @@ import { useTheme } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthContext";
 import AdminControls from "./AdminControls";
 import { FaTimes } from "react-icons/fa";
+import Footer from "./Footer";
 
 function Projects() {
   const { darkMode } = useTheme();
@@ -273,6 +274,7 @@ function Projects() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

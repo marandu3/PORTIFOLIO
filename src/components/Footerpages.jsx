@@ -12,7 +12,7 @@ function Footerpages() {
                 <FaGithub
                         size={30}
                         className="hover:cursor-pointer"
-                        onClick={() => window.open("https://www.github.com/marandu3")}
+                        onClick={() => window.open("https://github.com/marandu3/PORTIFOLIO")}
                       />
                       <FaInstagramSquare
                         size={30}
