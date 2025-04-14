@@ -108,127 +108,50 @@ function Contacts() {
           
           <div className="p-8">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-6">
-              <div className="relative">
-                <label 
-                  htmlFor="user_name" 
-                  className={`block font-medium mb-2 transition-colors ${
-                    focused === 'name' 
-                      ? (darkMode ? 'text-primary-400' : 'text-primary-600') 
-                      : (darkMode ? 'text-light-200' : 'text-gray-700')
-                  }`}
-                >
-                  <FaUser className="inline-block mr-2" />
-                  Your Name
-                </label>
+              <div>
+                <label htmlFor="user_name" className="block font-medium mb-2">Your Name</label>
                 <input
                   type="text"
-                  name="user_name"
+                  name="name"
                   id="user_name"
-                  placeholder="John Doe"
                   value={formState.name}
                   onChange={handleInputChange}
-                  onFocus={() => handleFocus('name')}
-                  onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    darkMode 
-                      ? 'bg-dark-300 border-dark-100 text-light-100' 
-                      : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none ${
-                    focused === 'name' 
-                      ? 'ring-2 ring-primary-500 border-transparent' 
-                      : ''
-                  } transition-all`}
+                  placeholder="Enter your name"
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300 ${
+                    darkMode ? 'bg-dark-100 text-white border-dark-300' : 'bg-light-100 text-gray-800 border-gray-300'
+                  }`}
                   required
                 />
-                <div className={`absolute bottom-2 right-3 transition-all ${
-                  focused === 'name' ? 'opacity-100' : 'opacity-0'
-                }`}>
-                  <div className={`h-1 w-8 rounded-full ${
-                    darkMode ? 'bg-primary-500' : 'bg-primary-600'
-                  }`}></div>
-                </div>
               </div>
-              
-              <div className="relative">
-                <label 
-                  htmlFor="user_email" 
-                  className={`block font-medium mb-2 transition-colors ${
-                    focused === 'email' 
-                      ? (darkMode ? 'text-primary-400' : 'text-primary-600') 
-                      : (darkMode ? 'text-light-200' : 'text-gray-700')
-                  }`}
-                >
-                  <FaEnvelope className="inline-block mr-2" />
-                  Your Email
-                </label>
+              <div>
+                <label htmlFor="user_email" className="block font-medium mb-2">Your Email</label>
                 <input
                   type="email"
-                  name="user_email"
+                  name="email"
                   id="user_email"
-                  placeholder="email@example.com"
                   value={formState.email}
                   onChange={handleInputChange}
-                  onFocus={() => handleFocus('email')}
-                  onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    darkMode 
-                      ? 'bg-dark-300 border-dark-100 text-light-100' 
-                      : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none ${
-                    focused === 'email' 
-                      ? 'ring-2 ring-primary-500 border-transparent' 
-                      : ''
-                  } transition-all`}
+                  placeholder="Enter your email"
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300 ${
+                    darkMode ? 'bg-dark-100 text-white border-dark-300' : 'bg-light-100 text-gray-800 border-gray-300'
+                  }`}
                   required
                 />
-                <div className={`absolute bottom-2 right-3 transition-all ${
-                  focused === 'email' ? 'opacity-100' : 'opacity-0'
-                }`}>
-                  <div className={`h-1 w-8 rounded-full ${
-                    darkMode ? 'bg-primary-500' : 'bg-primary-600'
-                  }`}></div>
-                </div>
               </div>
-              
-              <div className="relative">
-                <label 
-                  htmlFor="message" 
-                  className={`block font-medium mb-2 transition-colors ${
-                    focused === 'message' 
-                      ? (darkMode ? 'text-primary-400' : 'text-primary-600') 
-                      : (darkMode ? 'text-light-200' : 'text-gray-700')
-                  }`}
-                >
-                  <FaCommentAlt className="inline-block mr-2" />
-                  Your Message
-                </label>
+              <div>
+                <label htmlFor="message" className="block font-medium mb-2">Your Message</label>
                 <textarea
                   name="message"
                   id="message"
                   rows="5"
-                  placeholder="What would you like to say?"
                   value={formState.message}
                   onChange={handleInputChange}
-                  onFocus={() => handleFocus('message')}
-                  onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    darkMode 
-                      ? 'bg-dark-300 border-dark-100 text-light-100' 
-                      : 'bg-white border-gray-300 text-gray-900'
-                  } focus:outline-none ${
-                    focused === 'message' 
-                      ? 'ring-2 ring-primary-500 border-transparent' 
-                      : ''
-                  } transition-all resize-none`}
+                  placeholder="Write your message here..."
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300 ${
+                    darkMode ? 'bg-dark-100 text-white border-dark-300' : 'bg-light-100 text-gray-800 border-gray-300'
+                  }`}
                   required
                 ></textarea>
-                <div className={`absolute bottom-2 right-3 transition-all ${
-                  focused === 'message' ? 'opacity-100' : 'opacity-0'
-                }`}>
-                  <div className={`h-1 w-8 rounded-full ${
-                    darkMode ? 'bg-primary-500' : 'bg-primary-600'
-                  }`}></div>
-                </div>
               </div>
               
               <div className="flex justify-center">

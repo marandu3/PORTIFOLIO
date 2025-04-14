@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer className={`relative z-10 w-full py-6 ${
       darkMode ? 'bg-dark-100' : 'bg-light-200'
-    }`}>
+    } fixed bottom-0`}>
       {/* Decorative top border with enhanced animation */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 bg-[length:200%_100%] animate-gradient-pulse"></div>
       
