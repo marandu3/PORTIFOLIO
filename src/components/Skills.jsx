@@ -9,53 +9,71 @@ function Skills() {
   const { darkMode } = useTheme();
   const { isAdmin } = useAuth();
   
-  const [skills, setSkills] = useState(() => {
-    const savedSkills = localStorage.getItem('portfolio-skills');
-    return savedSkills ? JSON.parse(savedSkills) : [
-      {
-        id: 1,
-        skill: "React",
-        percentage: 85,
-        category: "Frontend",
-        description: "Building modern user interfaces with React.js and related libraries"
-      },
-      {
-        id: 2,
-        skill: "JavaScript",
-        percentage: 90,
-        category: "Frontend",
-        description: "Modern ES6+ JavaScript for web development"
-      },
-      {
-        id: 3,
-        skill: "Tailwind CSS",
-        percentage: 80,
-        category: "UI/UX",
-        description: "Utility-first CSS framework for rapid UI development"
-      },
-      {
-        id: 4,
-        skill: "Node.js",
-        percentage: 75,
-        category: "Backend",
-        description: "Server-side JavaScript for building scalable applications"
-      },
-      {
-        id: 5,
-        skill: "MongoDB",
-        percentage: 70,
-        category: "Backend",
-        description: "NoSQL database for modern applications"
-      },
-      {
-        id: 6,
-        skill: "Responsive Design",
-        percentage: 85,
-        category: "UI/UX",
-        description: "Creating websites that work on all devices and screen sizes"
-      }
-    ];
-  });
+  const [skills, setSkills] = useState([
+    {
+      id: 1,
+      skill: "React",
+      percentage: 85,
+      category: "Frontend",
+      description: "Building modern user interfaces with React.js and related libraries"
+    },
+    {
+      id: 2,
+      skill: "JavaScript",
+      percentage: 90,
+      category: "Frontend",
+      description: "Modern ES6+ JavaScript for web development"
+    },
+    {
+      id: 3,
+      skill: "Tailwind CSS",
+      percentage: 80,
+      category: "UI/UX",
+      description: "Utility-first CSS framework for rapid UI development"
+    },
+    {
+      id: 4,
+      skill: "Node.js",
+      percentage: 75,
+      category: "Backend",
+      description: "Server-side JavaScript for building scalable applications"
+    },
+    {
+      id: 5,
+      skill: "MongoDB",
+      percentage: 70,
+      category: "Backend",
+      description: "NoSQL database for modern applications"
+    },
+    {
+      id: 6,
+      skill: "Responsive Design",
+      percentage: 85,
+      category: "UI/UX",
+      description: "Creating websites that work on all devices and screen sizes"
+    },
+    {
+      id: 7,
+      skill: "Python and FastAPI",
+      percentage: 60,
+      category: "Backend",
+      description: "A modern and fast framework for backend development"
+    },
+    {
+      id: 9,
+      skill: "Figma",
+      percentage: 70,
+      category: "UI/UX",
+      description: "Designing user interfaces and prototypes with Figma"
+    },
+    {
+      id: 9,
+      skill: "TypeScript",
+      percentage: 70,
+      category: "Frontend",
+      description: "Adding static types to JavaScript for better development experience"
+    },
+  ]);
   
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [newSkill, setNewSkill] = useState({
@@ -66,7 +84,7 @@ function Skills() {
   });
   
   useEffect(() => {
-    localStorage.setItem('portfolio-skills', JSON.stringify(skills));
+    // Removed localStorage sync for skills
   }, [skills]);
   
   const toggleForm = () => setIsFormOpen(!isFormOpen);

@@ -8,39 +8,57 @@ function Timeline() {
   const { darkMode } = useTheme();
   const { isAdmin } = useAuth();
   
-  const [events, setEvents] = useState(() => {
-    const savedEvents = localStorage.getItem('portfolio-timeline');
-    return savedEvents ? JSON.parse(savedEvents) : [
-      {
-        id: 1,
-        title: "Started Computer Engineering at University of Dar es Salaam",
-        date: "2023",
-        type: "education",
-        description: "Began my journey in Computer Engineering and Information Technology"
-      },
-      {
-        id: 2,
-        title: "First Web Development Project",
-        date: "2023",
-        type: "project",
-        description: "Built my first comprehensive web application using React and Tailwind CSS"
-      },
-      {
-        id: 3,
-        title: "Completed Advanced Level Education",
-        date: "2021 - 2023",
-        type: "education",
-        description: "Graduated from Marian Boys High School with Division I"
-      },
-      {
-        id: 4,
-        title: "Started Learning Programming",
-        date: "2021",
-        type: "personal",
-        description: "Began self-learning programming fundamentals and web development basics"
-      }
-    ];
-  });
+  const [events, setEvents] = useState([
+    {
+      id: 1,
+      title: "Started Practical Training at DHIS-2 UDSM",
+      date: "JULY-2025",
+      type: "education",
+      description: "Engaged in practical training at the University of Dar es Salaam, focusing on DHIS-2 development and implementation"
+    },
+    {
+      id: 2,
+      title: "Started Practical Training at Ras-Singida",
+      date: "2023",
+      type: "education",
+      description: "Engaged in practical training at Ras-Singida, focusing on software development and IT solutions"
+    },
+    {
+      id: 3,
+      title: "Started Computer Engineering at University of Dar es Salaam",
+      date: "2023",
+      type: "education",
+      description: "Began my journey in Computer Engineering and Information Technology"
+    },
+    {
+      id: 4,
+      title: "First Web Development Project",
+      date: "2023",
+      type: "project",
+      description: "Built my first comprehensive web application using React and Tailwind CSS"
+    },
+    {
+      id: 5,
+      title: "Completed Advanced Level Education",
+      date: "2021 - 2023",
+      type: "education",
+      description: "Graduated from Marian Boys High School with Division I"
+    },
+    {
+      id: 6,
+      title: "Graduated from O-Level Education",
+      date: "2017 - 2020",
+      type: "education",
+      description: "Graduated from O-Level Education with Division I at Dung'unyi Seminary School"
+    },
+    {
+      id: 7,
+      title: "Started Learning Programming",
+      date: "Way before - 2019",
+      type: "personal",
+      description: "Began self-learning programming fundamentals and web development basics"
+    }
+  ]);
   
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [newEvent, setNewEvent] = useState({
@@ -51,7 +69,7 @@ function Timeline() {
   });
   
   useEffect(() => {
-    localStorage.setItem('portfolio-timeline', JSON.stringify(events));
+    // Removed localStorage sync for timeline events
   }, [events]);
   
   const toggleForm = () => setIsFormOpen(!isFormOpen);
